@@ -22,6 +22,18 @@ public:
 		return *this;
 	}
 
+	void frequency(const float new_value) noexcept
+	{
+		assert(new_value >= 1.0f);
+
+		frequency_ = new_value;
+	}
+
+	float frequency() const noexcept
+	{
+		return frequency_;
+	}
+
 	void fill_buffer(const audio_buffer& buffer) override
 	{
 		assert(frequency >= 1.0f && frequency <= buffer.wave_format().sample_rate()/2.0f);

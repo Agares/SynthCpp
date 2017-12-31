@@ -85,9 +85,9 @@ void audio_stream::play(sample_provider &sample_provider) const
 
 		com_caller::call_method(audio_render_client, &IAudioRenderClient::GetBuffer, buffer_size, &raw_buffer);
 
-		for(auto i = 0; i < buffer_size * wave_format_->number_of_channels(); i++)
+		for(size_t i = 0; i < buffer_size * wave_format_->number_of_channels(); i++)
 		{
-			reinterpret_cast<int16_t*>(raw_buffer)[i] = buffer[i] * static_cast<float>(std::numeric_limits<int16_t>::max());
+			reinterpret_cast<int16_t*>(raw_buffer)[i] = int16_t(buffer[i] * static_cast<float>(std::numeric_limits<int16_t>::max()));
 		}
 
 		com_caller::call_method(audio_render_client, &IAudioRenderClient::ReleaseBuffer, buffer_size, 0);
