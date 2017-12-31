@@ -21,12 +21,48 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="audio_device_finder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_device.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wave_format.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wasapi_wave_format_factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="com_caller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sample_provider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sine_sample_provider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SynthCpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_device_finder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_stream.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
